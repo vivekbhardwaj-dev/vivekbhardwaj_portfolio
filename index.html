@@ -46,6 +46,13 @@
         <h2>My Work</h2>
         <p>My latest creative projects.</p>
 
+        <div class="work-tabs" role="tablist" aria-label="Work categories">
+            <button class="work-tab active" role="tab" id="tab-thumbnails" aria-selected="true" aria-controls="panel-thumbnails" data-tab="thumbnails" type="button">Thumbnails</button>
+            <button class="work-tab" role="tab" id="tab-videos" aria-selected="false" aria-controls="panel-videos" data-tab="videos" type="button">Video Edits</button>
+            <button class="work-tab" role="tab" id="tab-ugc" aria-selected="false" aria-controls="panel-ugc" data-tab="ugc" type="button">UGC Ads</button>
+        </div>
+
+        <div class="work-panel active" role="tabpanel" id="panel-thumbnails" aria-labelledby="tab-thumbnails">
         <div class="work-grid">
             <div class="work-card">
                 <img src="assets/images/thumbnail1.jpg" alt="Hidden Operations We Didn't Know About" loading="lazy" width="1280" height="720">
@@ -107,6 +114,29 @@
     <img src="assets/images/thumbnail15.jpg" alt="Why 90% of Traders Lose Money (And How to Join the 1%)" loading="lazy" width="1280" height="720">
     <h3>Why 90% of Traders Lose Money (And How to Join the 1%)</h3>
 </div>
+        </div>
+        </div>
+
+        <div class="work-panel" role="tabpanel" id="panel-videos" aria-labelledby="tab-videos" hidden>
+            <h3 class="panel-title">Featured <span>Video Edits</span></h3>
+            <div class="coming-soon">
+                <div class="cs-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="13" height="12" rx="3"/><path d="M15 10l6-3v10l-6-3"/></svg>
+                </div>
+                <h4>Coming Soon</h4>
+                <p>Portfolio under construction</p>
+            </div>
+        </div>
+
+        <div class="work-panel" role="tabpanel" id="panel-ugc" aria-labelledby="tab-ugc" hidden>
+            <h3 class="panel-title">Featured <span>UGC Ads</span></h3>
+            <div class="coming-soon">
+                <div class="cs-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="3"/><path d="M11 18h2"/></svg>
+                </div>
+                <h4>Coming Soon</h4>
+                <p>Portfolio under construction</p>
+            </div>
         </div>
     </section>
 

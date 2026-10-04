@@ -82,3 +82,22 @@ if (window.matchMedia("(hover: hover)").matches && !reduceMotion) {
         });
     });
 }
+
+
+/* ===== Work tabs (Thumbnails / Video Edits / UGC Ads) ===== */
+const tabs = document.querySelectorAll(".work-tab");
+const panels = document.querySelectorAll(".work-panel");
+tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+        tabs.forEach((t) => {
+            const on = t === tab;
+            t.classList.toggle("active", on);
+            t.setAttribute("aria-selected", on);
+        });
+        panels.forEach((p) => {
+            const on = p.id === "panel-" + tab.dataset.tab;
+            p.hidden = !on;
+            p.classList.toggle("active", on);
+        });
+    });
+});

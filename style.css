@@ -709,3 +709,96 @@ nav a:hover { color: var(--text); }
     .profile { padding: 14px; gap: 14px; }
     .avatar { width: 56px; height: 56px; font-size: 18px; }
 }
+
+
+/* ================= WORK TABS ================= */
+.work-tabs {
+    display: flex;
+    width: fit-content;
+    max-width: 100%;
+    gap: 6px;
+    margin: 45px auto 0;
+    padding: 6px;
+    background: var(--card2);
+    border: 1px solid var(--line3);
+    border-radius: 999px;
+}
+.work-tab {
+    padding: 14px 28px;
+    color: var(--dim);
+    background: transparent;
+    border: 0;
+    border-radius: 999px;
+    font: 800 13px Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: color .3s, background .3s, box-shadow .3s;
+}
+.work-tab:hover { color: var(--text); }
+.work-tab.active {
+    color: #fff;
+    background: linear-gradient(90deg, #a855f7, #ec4899);
+    box-shadow: 0 8px 25px rgba(168,85,247,.3);
+}
+.work-tab:focus-visible { outline: 2px solid #c084fc; outline-offset: 3px; }
+
+.work-panel[hidden] { display: none; }
+.work-panel.active { animation: rise .6s var(--ease) backwards; }
+
+.panel-title {
+    margin-top: 50px;
+    text-align: center;
+    font-size: clamp(36px, 5vw, 64px);
+    letter-spacing: -2px;
+    font-weight: 900;
+}
+.panel-title span {
+    background: linear-gradient(90deg, #a855f7, #ec4899);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.coming-soon {
+    max-width: 670px;
+    margin: 50px auto 0;
+    padding: 70px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: var(--card2);
+    border: 1px solid var(--line3);
+    border-radius: 56px;
+}
+.cs-icon {
+    width: 80px; height: 80px;
+    display: grid; place-items: center;
+    margin-bottom: 28px;
+    color: #a855f7;
+    background: rgba(168,85,247,.12);
+    border-radius: 50%;
+}
+.coming-soon h4 {
+    font-size: clamp(26px, 4vw, 36px);
+    font-weight: 900;
+    letter-spacing: -.5px;
+    text-transform: uppercase;
+}
+.coming-soon p {
+    margin-top: 14px;
+    color: var(--dim);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+    .work-tabs { margin-top: 35px; }
+    .work-tab { padding: 12px 14px; font-size: 11px; letter-spacing: 1px; }
+    .coming-soon { padding: 50px 20px; border-radius: 36px; }
+    .coming-soon p { letter-spacing: 3px; font-size: 11px; }
+}
